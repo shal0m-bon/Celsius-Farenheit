@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius_converter</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/script.js">
+</head>
+<body>
+    <div>
+        <h1>Enter the number you want to calculate :)</h1>
+        <input type="number" placeholder="Enter a number.." id="number"><br><br>
+        <button type="button" onclick="celsius()">Answer...</button><br>
+       <pre>The answer is <span id="ans"> </span> Farenheits</pre>
+    </div>
+
+    <script>
+        
+        const input = document.getelementbyid('number').value
+        const ans = document.getElementById('ans').value
+
+
+        function celsius(){
+            let x = document.getElementById('number').value
+            let y = (x - 32) * 5/9;
+            let answer = document.getElementById('ans')
+            answer.textContent = y
+        }
+    </script>
+
+</body>
+</html>
